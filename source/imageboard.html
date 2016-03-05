@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mark van Dijken - Portfolio</title>
+  <!--build:css css/style.css-->
+  <link rel="stylesheet" href="css/style.css">
+  <!--endbuild-->
+</head>
+<body>
+  <main>
+    <header>
+      <nav>
+        <ul>
+          <li><a class="active" href="index.html">[Projects]</a></li>
+          <li><a href="about.html">[About]</a></li>
+        </ul>
+      </nav>
+      <h1>Mark van Dijken</h1>
+      <h2>Frontend &amp; design</h2>
+    </header>
+
+    <article class="work-info">
+      <img src="img/nodechan_I.PNG" alt="">
+      <h1>Imageboard gemaakt in Node.js</h1>
+      <p>Als eindopdracht voor het vak Server-Side Scripting heb ik een imageboard gemaakt dat draait op Node.js (met <a href="http://expressjs.com/" target="_blank">express</a> en <a href="http://jade-lang.com/" target="_blank">jade</a>). Het was mijn eerste project met Node.js en ik heb er enorm veel van geleerd.</p>
+      <p>Er waren verschillende functionaliteiten die in de eindopdracht moesten voorkomen &mdash; inloggen met behulp van sessions, het uploaden van afbeeldingen, een connectie met een MySQL database &mdash; maar in de uitvoering waren we vrij om te doen en laten wat we wilden.</p>
+      <p>Omdat ik het leuk vind om opdrachten een beetje te remixen, besloot ik om een imageboard na te maken. Een imageboard is een soort van forum waarbij het uploaden van afbeeldingen centraal staat. Een imageboard is opgedeeld in boards, sub-secties van de site over een bepaald onderwerp. Op deze boards kunnen gebruikers threads aanmaken, threads bestaan uit een afbeelding en een blokje tekst. Andere gebruikers kunnen daarna reageren op deze threads met posts bestaande uit afbeeldingen en/of commentaar. In principe zijn alle gebruikers anoniem maar het is mogelijk om een naam mee te geven.</p>
+      <p>Ik ben tijdens het bouwen van de applicatie begonnen met de meeste simpele versie die ik kon bedenken, één statische pagina waarop comments geplaats kunnen worden. Toen heb ik stapje voor stapje de web-app uitgebreid, eerst het uploaden van afbeeldingen, daarna het aanmaken van verschillende threads en als laatste het aanmaken van de verschillende boards.</p>
+      <a href="https://github.com/morkvd/nodechan">Bekijk de source op gitHub</a>
+      
+      <figure>
+        <img src="img/nodechanBoardview.jpg" alt="">
+        <figcaption>Board view</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/nodechanThreadview.jpg" alt="">
+        <figcaption>Thread view</figcaption>
+      </figure>
+      
+      <figure>
+        <img src="img/nodechanThreadviewExpanded.jpg" alt="">
+        <figcaption>Thread view image expanded</figcaption>
+      </figure>
+
+    </article>
+  </main>
+</body>
+</html>

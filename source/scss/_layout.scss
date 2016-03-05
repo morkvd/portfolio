@@ -1,0 +1,238 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+  background: #000008; /* Old browsers */
+  background: -moz-linear-gradient(top, hsla(217,100%,9%,1) 0%, hsla(240,100%,2%,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, hsla(217,100%,9%,1) 0%,hsla(240,100%,2%,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, hsla(217,100%,9%,1) 0%,hsla(240,100%,2%,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00122e', endColorstr='#000008',GradientType=0 ); /* IE6-9 */
+  background-attachment: fixed;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* + * {
+  margin-top: 1.2rem;
+}
+
+/* fonts */
+@font-face {
+  font-family: 'bebas_neuebold';
+  src: url('../fonts/bebas/bebasneue_bold-webfont.eot');
+  src: url('../fonts/bebas/bebasneue_bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/bebas/bebasneue_bold-webfont.woff2') format('woff2'),
+       url('../fonts/bebas/bebasneue_bold-webfont.woff') format('woff'),
+       url('../fonts/bebas/bebasneue_bold-webfont.ttf') format('truetype'),
+       url('../fonts/bebas/bebasneue_bold-webfont.svg#bebas_neuebold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'source_code_prolight';
+    src: url('../fonts/sourceCode/sourcecodepro-light-webfont.eot');
+    src: url('../fonts/sourceCode/sourcecodepro-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourceCode/sourcecodepro-light-webfont.woff2') format('woff2'),
+         url('../fonts/sourceCode/sourcecodepro-light-webfont.woff') format('woff'),
+         url('../fonts/sourceCode/sourcecodepro-light-webfont.ttf') format('truetype'),
+         url('../fonts/sourceCode/sourcecodepro-light-webfont.svg#source_code_prolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  border-top: solid .5em $bgcolor-light;
+}
+
+main {
+  max-width: 75em;
+  padding: 0 1% 4em 1%;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 100%;
+
+  > h1, > h2 {
+    text-align: center
+  }
+  > h1 {
+    font-size: 4em;
+    font-family: $display_font-stack;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: $display-color;
+    text-shadow: 0px 0px 4px $display-color;
+    margin: 0;
+  }
+  > h2 {
+    font-family: $display_font-stack;
+    font-size: 2em;
+    margin: 0 0 1em;
+    color: $display-color;
+    text-shadow: 0px 0px 4px $display-color;
+  }
+
+  nav {
+    ul {
+      padding: 0 0 0 0.35em;
+      margin-top: 0;
+      text-shadow: 0 0 2px $nav-textshadow;
+      text-align: center;
+
+      li {
+        font-size: 0.8em;
+        list-style: none;
+        color: $body-color;
+        display: inline-block;
+        margin: 0 0.8em 0 0;
+        text-transform: uppercase;
+      }
+    }
+
+    a {
+      font-family: $body_font-stack;
+      color: $body-color;
+      padding: 0.6em 1em;
+      display: block;
+
+      &.active {
+        background-color: $bgcolor-light;
+        color: $body-color;
+        text-shadow: 0px 0px 2px $nav-textcolor;
+        text-decoration: none;
+        margin: 0;
+      }
+
+      &:hover,
+      &:active {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+article {
+  h1, h2, p, li, a, figcaption {
+    font-family: $body_font-stack;
+    color: $body-color;
+  }
+}
+
+article.work-box {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 48%;
+  margin: 0.3em 1%;
+  background-color: $homebox-color;
+
+  h1 {
+    margin: 0;
+    font-size: 1em;
+    min-height: 3.3em;
+    padding: 0.1em 0.4em 0.2em;
+  }
+
+  img {
+    width: 100%;
+    margin: 0px;
+    display: block;
+  }
+}
+
+article.work-info {
+  max-width: 40em;
+  margin: 0 auto;
+  font-size: 0.9em;
+  
+  h1 {
+    font-size: 1.6em;
+  }
+
+  figure {
+    margin: 0;
+    margin-top: 3em; 
+
+    figcaption {
+      color: $body-color;
+      margin-top: .2em;
+      text-align: center;
+    }
+  }
+  
+  img {
+    width: 100%;
+  }
+
+  a {
+    font-weight: bold;
+    color: $display-color;
+    text-decoration: underline;
+  }
+
+  p + h2, ul + h2 {
+    margin-top: 2.4em;
+  }
+}
+
+@media (min-width: $breakpoint-1) {
+  body {
+    padding: 0 1em;
+  }
+  main {
+    margin: 0 auto;
+  }
+  
+  nav ul li {
+    font-size: 1.2em;
+  }
+  header nav ul li a {
+    font-size: 1.2em;
+  }
+
+  header > h1 {
+    font-size: 5em;
+  }
+
+  article.work-box {
+    margin: 0.4em;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 17.5em;
+    border: solid .4em $bgcolor-light;
+
+    img {
+      width: 100%;
+      margin: 0px;
+    }
+  }
+
+  article.work-info {
+    max-width: 40em;
+    margin: 0 auto;
+    font-size: 1em;
+    
+    h1 {
+      font-size: 1.8em;
+    }
+  }
+}
+
+@keyframes glow {
+    to {
+        text-shadow: 0px 0px 8px $display-color-glow;
+    }
+}
