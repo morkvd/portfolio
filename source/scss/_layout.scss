@@ -186,6 +186,14 @@ article.work-info {
   p + h2, ul + h2 {
     margin-top: 2.4em;
   }
+
+  iframe {
+    width: 640px;
+    height: 366px;
+    background-color: $bgcolor-light;
+    border: solid 0.5em $bgcolor-light;
+    margin-bottom: 4em;
+  }
 }
 
 @media (min-width: $breakpoint-1) {
