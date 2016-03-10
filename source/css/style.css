@@ -523,6 +523,8 @@ article.work-info {
     flex-shrink: 0;
     flex-basis: 17.5em;
     border: solid 0.4em #305f9c; }
+    article.work-box h1 {
+      font-size: 1em; }
     article.work-box img {
       width: 100%;
       margin: 0px; }
