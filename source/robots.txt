@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /FED/
+Disallow: /klikmodel/
+Disallow: /srp/
+Disallow: /tripleV/
+Disallow: /logline/
+Disallow: /localizer/
+Disallow: /stageverslag/
+Disallow: /stageverslag2/

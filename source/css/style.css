@@ -480,6 +480,8 @@ article.work-info {
   font-size: 0.9em; }
   article.work-info h1 {
     font-size: 1.6em; }
+  article.work-info .contact {
+    text-align: center; }
   article.work-info figure {
     margin: 0;
     margin-top: 3em; }
@@ -493,6 +495,8 @@ article.work-info {
     font-weight: bold;
     color: #ed1d23;
     text-decoration: underline; }
+  article.work-info a:focus {
+    outline: none; }
   article.work-info p + h2, article.work-info ul + h2 {
     margin-top: 2.4em; }
   article.work-info iframe {

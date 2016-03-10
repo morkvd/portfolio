@@ -161,7 +161,10 @@ article.work-info {
   h1 {
     font-size: 1.6em;
   }
-
+  .contact {
+    text-align: center;
+  }
+  
   figure {
     margin: 0;
     margin-top: 3em; 
@@ -181,6 +184,9 @@ article.work-info {
     font-weight: bold;
     color: $display-color;
     text-decoration: underline;
+  }
+  a:focus {
+    outline: none;
   }
 
   p + h2, ul + h2 {
