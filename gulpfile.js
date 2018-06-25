@@ -60,8 +60,8 @@
     });
 
     gulp.task('palantir', function () {
-        gulp.watch('source/scss/**/*.scss', ['sass']);
-        gulp.watch('source/js/**/*.js', ['jshint']);
+        gulp.watch('source/scss/**/*.scss', gulp.series('sass'));
+        gulp.watch('source/js/**/*.js', gulp.series('jshint'));
     });
 
     gulp.task('forge', function () {
